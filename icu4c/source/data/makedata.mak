@@ -34,7 +34,7 @@ ICU_LIB_TARGET=$(DLL_OUTPUT)\$(U_ICUDATA_NAME).dll
 !MESSAGE ICU data make path is $(ICUMAKE)
 
 PYTHON=python
-!IF [$(PYTHON) -c "import sys; sys.exit(0 if sys.version_info[0] >= 3 else 1)"] != 0
+!IF [$(PYTHON) -c "import sys; sys.exit(0 if sys.version_info.major >= 3 else 1)"] != 0
 !ERROR Python 3.0 or higher is required to build this project!
 !ELSE
 !MESSAGE Found a valid Python 3+ installation.
